@@ -1,0 +1,140 @@
+/* Main styles for Vibe Not Vibing GitHub Profile Viewer */
+
+/* General styling */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Profile card styling */
+.profile-card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.avatar-img {
+    width: 150px;
+    height: 150px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bio {
+    font-style: italic;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    padding: 10px 0;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    background-color: #e9ecef;
+    transform: translateY(-3px);
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-weight: bold;
+    color: #0d6efd;
+    font-size: 1.75rem;
+}
+
+.stat-card span {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+/* Repository list styling */
+.repo-list {
+    max-height: 800px;
+    overflow-y: auto;
+}
+
+.repo-item {
+    border-left: 4px solid transparent;
+    transition: all 0.2s;
+    margin-bottom: 8px;
+}
+
+.repo-item:hover {
+    border-left-color: #0d6efd;
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+.repo-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Language bar styling */
+.language-bar {
+    display: flex;
+    height: 8px;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.language-item {
+    height: 100%;
+    transition: width 0.3s;
+}
+
+.language-item:nth-child(1) { background-color: #3498db; }
+.language-item:nth-child(2) { background-color: #2ecc71; }
+.language-item:nth-child(3) { background-color: #e74c3c; }
+.language-item:nth-child(4) { background-color: #f39c12; }
+.language-item:nth-child(5) { background-color: #9b59b6; }
+.language-item:nth-child(6) { background-color: #1abc9c; }
+.language-item:nth-child(7) { background-color: #34495e; }
+.language-item:nth-child(8) { background-color: #e67e22; }
+.language-item:nth-child(9) { background-color: #c0392b; }
+.language-item:nth-child(10) { background-color: #16a085; }
+
+.language-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 5px;
+}
+
+.language-tag {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+}
+
+/* Chart legend styling */
+.legend-item {
+    margin-bottom: 6px;
+}
+
+.color-box {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .repo-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .avatar-img {
+        width: 120px;
+        height: 120px;
+    }
+}
