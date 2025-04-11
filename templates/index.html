@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}GitHub Profile Viewer | Vibe Not Vibing{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow-lg border-0 rounded-3 my-5">
+            <div class="card-header bg-primary text-white">
+                <h3 class="text-center font-weight-light my-2">
+                    <i class="fab fa-github me-2"></i>GitHub Profile Viewer
+                </h3>
+            </div>
+            <div class="card-body p-4">
+                <div class="text-center mb-4">
+                    <p class="lead">Enter a GitHub username to view their profile and repositories</p>
+                </div>
+                <form method="POST" action="{{ url_for('profile') }}">
+                    <div class="form-floating mb-3">
+                        <input class="form-control" id="github_username" name="github_username" type="text" placeholder="GitHub Username" required autofocus />
+                        <label for="github_username">GitHub Username</label>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
+                        <button class="btn btn-primary btn-lg" type="submit">
+                            <i class="fas fa-search me-2"></i>View Profile
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-center py-3">
+                <div class="small">
+                    <p>Try popular GitHub users like: torvalds, defunkt, gaearon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">About This App</h5>
+                <p class="card-text">This application allows you to explore GitHub profiles and repositories in an elegant and user-friendly interface. You can:</p>
+                <ul>
+                    <li>View detailed user information</li>
+                    <li>Browse repositories with language statistics</li>
+                    <li>See commit activity and popularity metrics</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">How It Works</h5>
+                <p class="card-text">Enter any GitHub username in the search box above. We'll fetch data from the GitHub API and present it in an organized, visual format that makes it easy to understand the user's GitHub activity and contributions.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
